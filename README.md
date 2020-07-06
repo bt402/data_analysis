@@ -294,7 +294,7 @@ infection_dataframe(filename)
 interactions_between_nodes(user_id_a, user_id_b)
 	'''
 	Takes in the numerical ID of two nodes, which we want to get the interactions between
-	Returns two dictionaries, which acct as a timeline for the two users, and the actions they took at each time step 
+	Returns two dictionaries, which act as a timeline for the two users, and the actions they took at each time step 
 	:return: dict_a, dict_b
 	'''
 	return node_a_actions, node_b_actions
