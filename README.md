@@ -225,19 +225,85 @@ list_of_infected()
 [7, 8, 9, 11, 12, 13, 15, 16, 19, 20]
 
 list_of_actions(user_id=None, username=None, timestep=None)
+	'''
+	If no parameters are passed, the function will return all actions at each timestep
+	With user_id or username parameter, the function will return interactions from a specific user
+	timestep parameter will get all the actions at a given timestep
 
+	:param user_id: numerical user ID
+	:param username: String username
+	:param timestep: time t at which all actions occured
+	:return: list of actions
+	'''
+	return actions_dict
+
+>>> user_data.list_of_actions()
+{1592904524: None, 1592904525: ['received', 'sent', 'sent', 'sent', 'received', 'received'], 1592904526: ['received', 'sent', 'received', 'received', 'sent', 'sent'], 1592904527: ['received', 'sent', 'sent', 'sent', 'received', 'received'].....}
+
+>>> user_data.list_of_actions(username="Anna")
+{1592904524: None, 1592904525: None, 1592904526: None, 1592904527: None, 1592904528: None, 1592904529: ['received'], 1592904530: None, 1592904531: ['sent'].....}
+
+>>> user_data.list_of_actions(timestep=10)
+{1592904534: ['sent', 'deleted', 'received', 'sent', 'received', 'sent', 'opened_item', 'sent', 'deleted', 'received', 'received']}
+
+>>> user_data.list_of_actions(username="Anna", timestep=10)
+{1592904534: None}
 
 actions_before_infection(user_id=None, username=None)
+	'''
+	Takes either numerical user ID or string username, if nothing passed it will amalgamate all user actions 
+	Returns a list of actions that took place before infection 
+	:param user_id: numerical user ID
+	:param username: String username
+	:return: If no parameters passed, return actions before infection for all users, otherwise return for specific user
+	'''
+	return action_list
 
+>>> user_data.actions_before_infection()
+['sent', 'deleted', 'received', 'deleted', 'sent', 'sent', 'sent', 'sent', 'received', 'block', 'block', 'received', 'sent', 'opened_item', 'received', 'deleted', .....]
+
+>>> user_data.actions_before_infection(user_id=11)
+['received', 'deleted', 'sent']
+
+>>> user_data.actions_before_infection(username="mttll")
+['sent', 'sent', 'sent', 'sent', 'sent', 'sent', 'sent', 'received', 'sent', 'sent', 'received', 'received', 'opened_item']
 
 actions_after_infection(user_id=None, username=None)
-
+	'''
+	Takes either numerical user ID or string username, if nothing passed it will amalgamate all user actions 
+	Returns a list of actions that took place before infection 
+	:param user_id: numerical user ID
+	:param username: String username
+	:return: If no parameters passed, return actions after infection for all users, otherwise return for specific user
+	'''
+	return action_list
+	
+***SAME USAGE AS ABOVE***
 
 infection_dataframe(filename)
+	'''
+	Takes in the XML filename we want to convert to pandas dataframe
+	convert the XML file into a pandas dataframe, with information about each timestep and infection of the given user/file at each time t
+	:param filename: filename of the XML we want to convert
+	:return: df
+	'''
+	return infection_dataframe
 
+>>> df = user_data.infection_dataframe(filename="elenita.xml")
 
 interactions_between_nodes(user_id_a, user_id_b)
-
+	'''
+	Takes in the numerical ID of two nodes, which we want to get the interactions between
+	Returns two dictionaries, which acct as a timeline for the two users, and the actions they took at each time step 
+	:return: dict_a, dict_b
+	'''
+	return node_a_actions, node_b_actions
+	
+>>> node_a, node_b = user_data.interactions_between_nodes(node_a, node_b)
+>>> node_a
+{1592904524: None, 1592904525: None, 1592904526: None, 1592904527: ['received'], 1592904528: ['sent'], 1592904529: None, 1592904530: None .....}
+>>> node_b
+{1592904524: None, 1592904525: None, 1592904526: None, 1592904527: ['sent'], 1592904528: ['received'], 1592904529: None, 1592904530: None .....}
 
 ```
 
