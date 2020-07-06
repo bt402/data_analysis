@@ -73,9 +73,9 @@ user_data.actions_before_infection(username="Anna") # pass in the username as pa
 ---
 
 ## Usage
-> The library contains two classes, one for `user data` and one for `network data`
-> The library first has to be imported, and then we have to set path to the experiment round we want to analyse 
-> Numerical `user ID` corresponds to `node ID` in `NetworkX`
+> The library contains two classes, one for `user data` and one for `network data`.
+> The library first has to be imported, and then we have to set path to the experiment round we want to analyse.
+> Numerical `user ID` corresponds to `node ID` in `NetworkX`.
 
 ```python 
 import experiments_data as ed
@@ -90,6 +90,10 @@ Some function have default parameters of None, and they will return a full list 
 where others might require username or user ID, which is numerical 
 '''
 
+user_data.user_infected_in_round(user_id=7) # simple function to tell you if a user was infected in the round, you can use either user ID or username
+>>> True
+user_data.user_is_seed(username="roco89") # check if user was a seed, the parameter is also either username or user ID 
+>>> False
 ```
 
 ---
