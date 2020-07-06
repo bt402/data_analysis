@@ -78,9 +78,17 @@ user_data.actions_before_infection(username="Anna") # pass in the username as pa
 > The library contains two classes, one for user data and one for network data
 > The library first has to be imported, and then we have to set path to the experiment round we want to analyse 
 
-```python
+```python 
+import experiments_data as ed
 
+ed.data_location("experiments_ES/first_run/round1/") 
+
+user_data = ed.user_data() # this is data about users and behaviour
+network_data = ed.network_data() # data about the network
 ```
+
+---
+
 ## Documentation
 
 
