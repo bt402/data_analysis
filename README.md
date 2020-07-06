@@ -99,26 +99,67 @@ user_data.user_is_seed(username="roco89") # check if user was a seed, the parame
 ---
 
 ## Documentation
-> The avaliable functions, parameters and return types 
+> The avaliable functions, parameters and return types.
+> Each experiment took 60 seconds, so the timesteps avaliable to extract data are from 0 to 59 
 
 - Network Data Functions
 
 ```python 
 get_edgelist()
-'''
-Takes no parameters
-:return: return a list of tuples between each nodes
-'''
+	'''
+	Takes no parameters
+	:return: return a list of tuples between each nodes
+	'''
 	return edge_list
 
 >>> get_edgelist()
 [(7, 12), (7, 13), (7, 14), (7, 15), (7, 16), (7, 18), (7, 21), (7, 22), (8, 9)]
 
 plot_round_network()
+'''
+	Takes no parameters
+	Doesn't return an object
+	Used to show a plot of the network (without any status)
+'''
+
+
 animate_network()
+'''
+	Takes no parameters
+	Doesn't return an object
+	Shows an animation of the experiment, with each node changing colour depending on its status
+	Green - Healthy node without any infected messages
+	Yellow - Node has received an infected message but not opened it
+	Red - Infected by a message that was opened 
+'''
+
 network_status_at_time(timestep)
+	'''
+	Takes an integer timestep parameter, corresponding to a given second in the experiment 
+	:param timestep: timestep in seconds from 0 to 59
+	:return: return a list of nodes with their status at each time t
+	'''
+	return status_list
+
+>>> network_data.network_status_at_time(10)
+[{'7': 'exposed'}, {'8': 'infected'}, {'9': 'exposed'}, {'10': 'exposed'}, {'11': 'healthy'}, {'12': 'healthy'}, {'13': 'healthy'}]
+		
 to_networkx_object()
+	'''
+	Takes no parameters
+	Returns networkX object 
+	:return: networkX object of the graph
+	'''
+	return graph
+
 users_connected(s, t)
+	'''
+	Takes two integer parameters, user ID 1 and user ID 2
+	:param s: source node
+	:param t: target node
+	:return: boolean if two nodes are connected
+	'''
+	return user_connected
 ```
 
 - User Data Functions 
