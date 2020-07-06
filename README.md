@@ -1,6 +1,6 @@
-<a href="http://fvcproductions.com"><img src="https://i.ibb.co/wrVMjTr/nutmeg.png" title="NUTMEGlogo" alt="NUTMEGlogo"></a>
+<a href="http://fvcproductions.com"><img src="https://i.ibb.co/wrVMjTr/nutmeg.png" width="200px" title="NUTMEGlogo" alt="NUTMEGlogo"></a>
 
-***NUTMEG: Network Evaluation Multiplayer Game for studying contagion processes on networks**
+***NUTMEG: Network Evaluation Multiplayer Game for studying contagion processes on networks***
 
 # NUTMEG Analysis Library
 
