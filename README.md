@@ -53,6 +53,7 @@
 
 - [Installation](#installation)
 - [Features](#features)
+- [Features](#usage)
 - [Contributing](#contributing)
 - [Team](#team)
 - [FAQ](#faq)
@@ -109,7 +110,7 @@ $ bower install
 ---
 
 ## Features
-## Usage (Optional)
+## Usage
 ## Documentation (Optional)
 ## Tests (Optional)
 
