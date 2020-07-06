@@ -59,9 +59,16 @@
 ## Example
 
 ```python 
-// check the actions of a specific user before they got infected, using their username 
+''' check the actions of a specific user before they got infected, using their username '''
+
+import experiments_data as ed
+
+ed.data_location("experiments_ES/first_run/round1/") # set path to the experiment
 
 user_data.actions_before_infection(username="Anna") # pass in the username as parameter without XML extension
+
+# The function returns a list of all the actions user took before they got infected
+['block', 'block', 'received', 'sent', 'opened_item', 'received', 'deleted', 'received', 'deleted', 'sent', 'sent', 'sent', 'received']
 
 ```
 
