@@ -105,10 +105,10 @@ user_data.user_is_seed(username="roco89") # check if user was a seed, the parame
 
 ```python 
 get_edgelist()
-	'''
-	Takes no parameter
-	:return: return a list of tuples between each nodes
-	'''
+'''
+Takes no parameters
+:return: return a list of tuples between each nodes
+'''
 	return edge_list
 
 >>> get_edgelist()
