@@ -49,8 +49,6 @@
 
 ## Table of Contents
 
-> If your `README` has a lot of info, section headers might be nice.
-
 - [Usage](#usage)
 - [Documentation](#documentation)
 
@@ -75,7 +73,7 @@ user_data.actions_before_infection(username="Anna") # pass in the username as pa
 ---
 
 ## Usage
-> The library contains two classes, one for user data and one for network data
+> The library contains two classes, one for `user data` and one for `network data`
 > The library first has to be imported, and then we have to set path to the experiment round we want to analyse 
 
 ```python 
