@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<user_activity>
+  <block>
+    <blocked_user/>
+    <total_interactions/>
+    <time>1592904473</time>
+  </block>
+  <block>
+    <blocked_user>21</blocked_user>
+    <total_interactions>11</total_interactions>
+    <time>1592904473</time>
+  </block>
+  <received message_id="18_17_1592904529">
+    <from>18</from>
+    <time>1592904529</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="17_18_1592904531">
+    <to>18</to>
+    <time>1592904531</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <opened_item message_id="17_18_1592904538">
+    <from>18</from>
+    <time>1592904538</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <received message_id="15_17_1592904540">
+    <from>15</from>
+    <time>1592904540</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <deleted message_id="17_15_1592904546">
+    <from>15</from>
+    <time>1592904546</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <received message_id="19_17_1592904548">
+    <from>19</from>
+    <time>1592904548</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <deleted message_id="17_19_1592904554">
+    <from>19</from>
+    <time>1592904554</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <sent message_id="17_22_1592904555">
+    <to>22</to>
+    <time>1592904555</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <sent message_id="17_12_1592904560">
+    <to>12</to>
+    <time>1592904560</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <sent message_id="17_8_1592904565">
+    <to>8</to>
+    <time>1592904565</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <received message_id="12_17_1592904566">
+    <from>12</from>
+    <time>1592904566</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="15_17_1592904566">
+    <from>15</from>
+    <time>1592904566</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <received message_id="19_17_1592904567">
+    <from>19</from>
+    <time>1592904567</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="17_19_1592904570">
+    <to>19</to>
+    <time>1592904570</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <received message_id="19_17_1592904576">
+    <from>19</from>
+    <time>1592904576</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <deleted message_id="17_12_1592904577">
+    <from>12</from>
+    <time>1592904577</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <received message_id="12_17_1592904578">
+    <from>12</from>
+    <time>1592904578</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <received message_id="8_17_1592904579">
+    <from>8</from>
+    <time>1592904579</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <deleted message_id="17_15_1592904580">
+    <from>15</from>
+    <time>1592904580</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </deleted>
+</user_activity>

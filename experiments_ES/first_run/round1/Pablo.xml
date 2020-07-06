@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<user_activity>
+  <received message_id="14_11_1592904473">
+    <from>14</from>
+    <time>1592904473</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <deleted message_id="11_14_1592904529">
+    <from>14</from>
+    <time>1592904529</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <sent message_id="11_18_1592904533">
+    <to>18</to>
+    <time>1592904533</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <received message_id="16_11_1592904535">
+    <from>16</from>
+    <time>1592904535</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <received message_id="10_11_1592904535">
+    <from>10</from>
+    <time>1592904535</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="20_11_1592904535">
+    <from>20</from>
+    <time>1592904535</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="13_11_1592904536">
+    <from>13</from>
+    <time>1592904536</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="11_22_1592904537">
+    <to>22</to>
+    <time>1592904537</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <received message_id="10_11_1592904537">
+    <from>10</from>
+    <time>1592904537</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="10_11_1592904539">
+    <from>10</from>
+    <time>1592904539</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="11_9_1592904542">
+    <to>9</to>
+    <time>1592904542</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <sent message_id="11_22_1592904546">
+    <to>22</to>
+    <time>1592904546</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <received message_id="18_11_1592904548">
+    <from>18</from>
+    <time>1592904548</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="11_16_1592904551">
+    <to>16</to>
+    <time>1592904551</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <opened_item message_id="11_16_1592904551">
+    <from>16</from>
+    <time>1592904551</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </opened_item>
+  <deleted message_id="11_16_1592904551">
+    <from>16</from>
+    <time>1592904551</time>
+    <user_infected/>
+    <message_infected/>
+  </deleted>
+  <received message_id="9_11_1592904551">
+    <from>9</from>
+    <time>1592904551</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <received message_id="20_11_1592904554">
+    <from>20</from>
+    <time>1592904554</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <deleted message_id="11_20_1592904554">
+    <from>20</from>
+    <time>1592904554</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <received message_id="18_11_1592904556">
+    <from>18</from>
+    <time>1592904556</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <deleted message_id="11_10_1592904557">
+    <from>10</from>
+    <time>1592904557</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <sent message_id="11_13_1592904560">
+    <to>13</to>
+    <time>1592904560</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <opened_item message_id="11_13_1592904560">
+    <from>13</from>
+    <time>1592904560</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <deleted message_id="11_13_1592904560">
+    <from>13</from>
+    <time>1592904560</time>
+    <user_infected/>
+    <message_infected/>
+  </deleted>
+  <deleted message_id="11_10_1592904563">
+    <from>10</from>
+    <time>1592904563</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <deleted message_id="11_10_1592904566">
+    <from>10</from>
+    <time>1592904566</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <received message_id="16_11_1592904567">
+    <from>16</from>
+    <time>1592904567</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <sent message_id="11_18_1592904569">
+    <to>18</to>
+    <time>1592904569</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <opened_item message_id="11_18_1592904570">
+    <from>18</from>
+    <time>1592904570</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <deleted message_id="11_18_1592904570">
+    <from>18</from>
+    <time>1592904570</time>
+    <user_infected/>
+    <message_infected/>
+  </deleted>
+  <deleted message_id="11_9_1592904573">
+    <from>9</from>
+    <time>1592904573</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </deleted>
+  <deleted message_id="11_20_1592904577">
+    <from>20</from>
+    <time>1592904577</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </deleted>
+  <received message_id="20_11_1592904577">
+    <from>20</from>
+    <time>1592904577</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+</user_activity>

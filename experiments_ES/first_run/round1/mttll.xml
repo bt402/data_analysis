@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<user_activity>
+  <sent message_id="20_7_1592904473">
+    <to>7</to>
+    <time>1592904473</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <sent message_id="20_9_1592904525">
+    <to>9</to>
+    <time>1592904525</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <sent message_id="20_19_1592904528">
+    <to>19</to>
+    <time>1592904528</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <sent message_id="20_18_1592904531">
+    <to>18</to>
+    <time>1592904531</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <sent message_id="20_13_1592904532">
+    <to>13</to>
+    <time>1592904532</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <sent message_id="20_12_1592904534">
+    <to>12</to>
+    <time>1592904534</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <sent message_id="20_11_1592904535">
+    <to>11</to>
+    <time>1592904535</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <received message_id="9_20_1592904536">
+    <from>9</from>
+    <time>1592904536</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="20_10_1592904537">
+    <to>10</to>
+    <time>1592904537</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <sent message_id="20_9_1592904538">
+    <to>9</to>
+    <time>1592904538</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <received message_id="19_20_1592904538">
+    <from>19</from>
+    <time>1592904538</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="12_20_1592904540">
+    <from>12</from>
+    <time>1592904540</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <opened_item message_id="20_9_1592904541">
+    <from>9</from>
+    <time>1592904541</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <received message_id="9_20_1592904542">
+    <from>9</from>
+    <time>1592904542</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <opened_item message_id="20_19_1592904543">
+    <from>19</from>
+    <time>1592904543</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <opened_item message_id="20_12_1592904546">
+    <from>12</from>
+    <time>1592904546</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <received message_id="12_20_1592904547">
+    <from>12</from>
+    <time>1592904547</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="20_9_1592904548">
+    <to>9</to>
+    <time>1592904548</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <opened_item message_id="20_9_1592904548">
+    <from>9</from>
+    <time>1592904548</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </opened_item>
+  <deleted message_id="20_9_1592904548">
+    <from>9</from>
+    <time>1592904548</time>
+    <user_infected/>
+    <message_infected/>
+  </deleted>
+  <received message_id="13_20_1592904548">
+    <from>13</from>
+    <time>1592904548</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="20_9_1592904549">
+    <to>9</to>
+    <time>1592904549</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <sent message_id="20_9_1592904550">
+    <to>9</to>
+    <time>1592904550</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <sent message_id="20_9_1592904551">
+    <to>9</to>
+    <time>1592904551</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <sent message_id="20_10_1592904552">
+    <to>10</to>
+    <time>1592904552</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <received message_id="13_20_1592904553">
+    <from>13</from>
+    <time>1592904553</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="20_11_1592904554">
+    <to>11</to>
+    <time>1592904554</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <received message_id="7_20_1592904555">
+    <from>7</from>
+    <time>1592904555</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <sent message_id="20_12_1592904556">
+    <to>12</to>
+    <time>1592904556</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <opened_item message_id="20_12_1592904557">
+    <from>12</from>
+    <time>1592904557</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <deleted message_id="20_12_1592904557">
+    <from>12</from>
+    <time>1592904557</time>
+    <user_infected/>
+    <message_infected/>
+  </deleted>
+  <received message_id="9_20_1592904558">
+    <from>9</from>
+    <time>1592904558</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <opened_item message_id="20_13_1592904559">
+    <from>13</from>
+    <time>1592904559</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <received message_id="9_20_1592904561">
+    <from>9</from>
+    <time>1592904561</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <opened_item message_id="20_13_1592904562">
+    <from>13</from>
+    <time>1592904562</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <received message_id="9_20_1592904562">
+    <from>9</from>
+    <time>1592904562</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <sent message_id="20_9_1592904564">
+    <to>9</to>
+    <time>1592904564</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <opened_item message_id="20_9_1592904564">
+    <from>9</from>
+    <time>1592904564</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </opened_item>
+  <deleted message_id="20_9_1592904564">
+    <from>9</from>
+    <time>1592904564</time>
+    <user_infected/>
+    <message_infected/>
+  </deleted>
+  <received message_id="9_20_1592904564">
+    <from>9</from>
+    <time>1592904564</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <sent message_id="20_9_1592904566">
+    <to>9</to>
+    <time>1592904566</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <opened_item message_id="20_9_1592904566">
+    <from>9</from>
+    <time>1592904566</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </opened_item>
+  <deleted message_id="20_9_1592904566">
+    <from>9</from>
+    <time>1592904566</time>
+    <user_infected/>
+    <message_infected/>
+  </deleted>
+  <received message_id="12_20_1592904568">
+    <from>12</from>
+    <time>1592904568</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="20_9_1592904568">
+    <to>9</to>
+    <time>1592904568</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <deleted message_id="20_9_1592904568">
+    <from>9</from>
+    <time>1592904568</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </deleted>
+  <opened_item message_id="20_9_1592904568">
+    <from>9</from>
+    <time>1592904568</time>
+    <user_infected/>
+    <message_infected/>
+  </opened_item>
+  <sent message_id="20_9_1592904570">
+    <to>9</to>
+    <time>1592904570</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <deleted message_id="20_9_1592904570">
+    <from>9</from>
+    <time>1592904570</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </deleted>
+  <opened_item message_id="20_9_1592904570">
+    <from>9</from>
+    <time>1592904570</time>
+    <user_infected/>
+    <message_infected/>
+  </opened_item>
+  <sent message_id="20_12_1592904572">
+    <to>12</to>
+    <time>1592904572</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <opened_item message_id="20_12_1592904572">
+    <from>12</from>
+    <time>1592904572</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <deleted message_id="20_12_1592904572">
+    <from>12</from>
+    <time>1592904572</time>
+    <user_infected/>
+    <message_infected/>
+  </deleted>
+  <opened_item message_id="20_7_1592904574">
+    <from>7</from>
+    <time>1592904574</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </opened_item>
+  <sent message_id="20_9_1592904575">
+    <to>9</to>
+    <time>1592904575</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <sent message_id="20_10_1592904576">
+    <to>10</to>
+    <time>1592904576</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <sent message_id="20_11_1592904577">
+    <to>11</to>
+    <time>1592904577</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <sent message_id="20_12_1592904579">
+    <to>12</to>
+    <time>1592904579</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <sent message_id="20_13_1592904580">
+    <to>13</to>
+    <time>1592904580</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <received message_id="9_20_1592904581">
+    <from>9</from>
+    <time>1592904581</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+</user_activity>

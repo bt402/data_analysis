@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<user_activity>
+  <deleted message_id="17_19_1592904584">
+    <from>19</from>
+    <time>1592904584</time>
+    <user_infected/>
+    <message_infected/>
+  </deleted>
+  <sent message_id="17_9_1592904638">
+    <to>9</to>
+    <time>1592904638</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <received message_id="9_17_1592904643">
+    <from>9</from>
+    <time>1592904643</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="17_22_1592904644">
+    <to>22</to>
+    <time>1592904644</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <sent message_id="17_18_1592904658">
+    <to>18</to>
+    <time>1592904658</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <received message_id="9_17_1592904660">
+    <from>9</from>
+    <time>1592904660</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <opened_item message_id="17_9_1592904666">
+    <from>9</from>
+    <time>1592904666</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </opened_item>
+  <sent message_id="17_15_1592904676">
+    <to>15</to>
+    <time>1592904676</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <sent message_id="17_19_1592904680">
+    <to>19</to>
+    <time>1592904680</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <received message_id="15_17_1592904689">
+    <from>15</from>
+    <time>1592904689</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+</user_activity>

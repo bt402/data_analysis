@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<user_activity>
+  <sent message_id="17_15_1592904692">
+    <to>15</to>
+    <time>1592904692</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </sent>
+  <received message_id="12_17_1592904745">
+    <from>12</from>
+    <time>1592904745</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="15_17_1592904750">
+    <from>15</from>
+    <time>1592904750</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <block>
+    <blocked_user/>
+    <total_interactions/>
+    <time>1592904756</time>
+  </block>
+  <block>
+    <blocked_user>12</blocked_user>
+    <total_interactions>11</total_interactions>
+    <time>1592904756</time>
+  </block>
+  <received message_id="19_17_1592904757">
+    <from>19</from>
+    <time>1592904757</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <block>
+    <blocked_user/>
+    <total_interactions/>
+    <time>1592904759</time>
+  </block>
+  <block>
+    <blocked_user>15</blocked_user>
+    <total_interactions>15</total_interactions>
+    <time>1592904759</time>
+  </block>
+  <received message_id="15_17_1592904760">
+    <from>15</from>
+    <time>1592904760</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="12_17_1592904762">
+    <from>12</from>
+    <time>1592904762</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="15_17_1592904764">
+    <from>15</from>
+    <time>1592904764</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <deleted message_id="17_15_1592904766">
+    <from>15</from>
+    <time>1592904766</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <deleted message_id="17_12_1592904770">
+    <from>12</from>
+    <time>1592904770</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <received message_id="18_17_1592904772">
+    <from>18</from>
+    <time>1592904772</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <deleted message_id="17_15_1592904774">
+    <from>15</from>
+    <time>1592904774</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <deleted message_id="17_18_1592904780">
+    <from>18</from>
+    <time>1592904780</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </deleted>
+  <sent message_id="17_18_1592904781">
+    <to>18</to>
+    <time>1592904781</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <received message_id="19_17_1592904782">
+    <from>19</from>
+    <time>1592904782</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="17_9_1592904785">
+    <to>9</to>
+    <time>1592904785</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <received message_id="19_17_1592904788">
+    <from>19</from>
+    <time>1592904788</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <sent message_id="17_8_1592904789">
+    <to>8</to>
+    <time>1592904789</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </sent>
+  <received message_id="9_17_1592904791">
+    <from>9</from>
+    <time>1592904791</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="18_17_1592904793">
+    <from>18</from>
+    <time>1592904793</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <unblock>
+    <unblocked_user>19</unblocked_user>
+    <total_interactions>17</total_interactions>
+    <time>1592904795</time>
+  </unblock>
+</user_activity>

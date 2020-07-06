@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<user_activity>
+  <received message_id="16_22_1592904582">
+    <from>16</from>
+    <time>1592904582</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="7_22_1592904640">
+    <from>7</from>
+    <time>1592904640</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="17_22_1592904644">
+    <from>17</from>
+    <time>1592904644</time>
+    <user_infected>1</user_infected>
+    <message_infected>1</message_infected>
+  </received>
+  <received message_id="12_22_1592904645">
+    <from>12</from>
+    <time>1592904645</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="7_22_1592904648">
+    <from>7</from>
+    <time>1592904648</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="11_22_1592904649">
+    <from>11</from>
+    <time>1592904649</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="16_22_1592904650">
+    <from>16</from>
+    <time>1592904650</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="7_22_1592904665">
+    <from>7</from>
+    <time>1592904665</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="9_22_1592904665">
+    <from>9</from>
+    <time>1592904665</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="14_22_1592904679">
+    <from>14</from>
+    <time>1592904679</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+  <received message_id="12_22_1592904685">
+    <from>12</from>
+    <time>1592904685</time>
+    <user_infected>0</user_infected>
+    <message_infected>0</message_infected>
+  </received>
+</user_activity>
