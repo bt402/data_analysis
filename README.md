@@ -43,7 +43,7 @@
 
 **Animation Example**
 
-![Recordit GIF](https://i.ibb.co/FYChwTM/animation-1.gif)
+![Recordit GIF](https://i.ibb.co/R9k2Gxs/ezgif-5-24c13b369335.gif)
 
 ---
 
