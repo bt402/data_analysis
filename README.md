@@ -1,8 +1,8 @@
 <a href="http://fvcproductions.com"><img src="https://i.ibb.co/wrVMjTr/nutmeg.png" title="NUTMEGlogo" alt="NUTMEGlogo"></a>
 
-***INSERT GRAPHIC HERE (include hyperlink in image)***
+***NUTMEG: Network Evaluation Multiplayer Game for studying contagion processes on networks**
 
-# Repository Title Goes Here
+# NUTMEG Analysis Library
 
 > Subtitle or Short Description Goes Here
 
