@@ -104,27 +104,36 @@ user_data.user_is_seed(username="roco89") # check if user was a seed, the parame
 - Network Data Functions
 
 ```python 
-get_edgelist(self)
-plot_round_network(self)
-animate_network(self)
-network_status_at_time(self, timestep)
-to_networkx_object(self)
-users_connected(self, s, t)
+get_edgelist()
+        '''
+		Takes no parameter
+        :return: return a list of tuples between each nodes
+        '''
+	return edge_list
+
+>>> get_edgelist()
+[(7, 12), (7, 13), (7, 14), (7, 15), (7, 16), (7, 18), (7, 21), (7, 22), (8, 9)]
+
+plot_round_network()
+animate_network()
+network_status_at_time(timestep)
+to_networkx_object()
+users_connected(s, t)
 ```
 
 - User Data Functions 
 
 ```python 
-get_id_from_username(self, username)
-get_username_from_id(self, user_id)
-user_is_seed(self, user_id=None, username=None)
-user_infected_in_round(self, user_id=None, username=None)
-list_of_infected(self)
-list_of_actions(self, user_id=None, username=None, timestep=None)
-actions_before_infection(self, user_id=None, username=None)
-actions_after_infection(self, user_id=None, username=None)
-infection_dataframe(self, filename)
-interactions_between_nodes(self, user_id_a, user_id_b)
+get_id_from_username(username)
+get_username_from_id(user_id)
+user_is_seed(user_id=None, username=None)
+user_infected_in_round(user_id=None, username=None)
+list_of_infected()
+list_of_actions(user_id=None, username=None, timestep=None)
+actions_before_infection(user_id=None, username=None)
+actions_after_infection(user_id=None, username=None)
+infection_dataframe(filename)
+interactions_between_nodes(user_id_a, user_id_b)
 ```
 
 ---
