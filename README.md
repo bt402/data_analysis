@@ -116,22 +116,22 @@ get_edgelist()
 [(7, 12), (7, 13), (7, 14), (7, 15), (7, 16), (7, 18), (7, 21), (7, 22), (8, 9)]
 
 plot_round_network()
-'''
+	'''
 	Takes no parameters
 	Doesn't return an object
 	Used to show a plot of the network (without any status)
-'''
+	'''
 
 
 animate_network()
-'''
+	'''
 	Takes no parameters
 	Doesn't return an object
 	Shows an animation of the experiment, with each node changing colour depending on its status
 	Green - Healthy node without any infected messages
 	Yellow - Node has received an infected message but not opened it
 	Red - Infected by a message that was opened 
-'''
+	'''
 
 network_status_at_time(timestep)
 	'''
@@ -166,15 +166,79 @@ users_connected(s, t)
 
 ```python 
 get_id_from_username(username)
+	'''
+	Takes string parameter of the username, which is the name of the XML file without the extension 
+	:return: return a user ID integer 
+	'''
+	return user_id
+
+>>> user_data.get_id_from_username("Pablo")
+11 
+
 get_username_from_id(user_id)
+	'''
+	Takes integer parameter of the user ID, this is the same as node ID in the graph
+	:return: return a username string
+	'''
+	return username
+	
+>>> user_data.get_username_from_id(15)
+Oxyura
+
 user_is_seed(user_id=None, username=None)
+	'''
+	Function takes either numerical user ID used in the tracking files, or username
+	and checks if the user was infected during given round
+	:param user_id: numerical user ID
+	:param username: String username
+	:return: boolean value
+	'''
+	return user_seeded
+	
+>>> user_data.user_is_seed(user_id=14)
+True 
+>>> user_data.user_is_seed(username="raquel")
+False
+
 user_infected_in_round(user_id=None, username=None)
+	'''
+	Doesn't take into account if the user was seed, but will return a boolean value if user was infected in the given round
+	:param user_id:
+	:param username:
+	:return: bolean
+	return infected_in_round
+	
+>>> user_data.user_infected_in_round(username="Anna")
+False
+>>> user_data.user_infected_in_round(user_id=13)
+True
+
 list_of_infected()
+	'''
+	Takes no parameters
+	Returns a list of user IDs which have been infected 
+	:return: list of all user_ids infected in the round
+	'''
+	return list_of_infected_nodes
+
+>>> list_of_infected()
+[7, 8, 9, 11, 12, 13, 15, 16, 19, 20]
+
 list_of_actions(user_id=None, username=None, timestep=None)
+
+
 actions_before_infection(user_id=None, username=None)
+
+
 actions_after_infection(user_id=None, username=None)
+
+
 infection_dataframe(filename)
+
+
 interactions_between_nodes(user_id_a, user_id_b)
+
+
 ```
 
 ---
