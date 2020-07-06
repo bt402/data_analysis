@@ -20,24 +20,30 @@
 - With the library you can get information about the user behaviour and the network 
 - Sample of data collected in Spain avaliable under experiments_ES
 
-> Tips
+> User Data
 
-- HAVE WHITE SPACE
-- MAKE IT PRETTY
-- GIFS ARE REALLY COOL
+- Get ID from username 
+- Get username from ID
+- Check if user is seed 
+- Check if user got infected in the round
+- Get a list of infected nodes 
+- Get list of actions for given user, which can also return certain actions at given timestep
+- Get actions of users before and after they got infected
+- Convert data from XML to pandas dataframe 
+- Get list of interactions between two nodes throughout the whole round 
 
-> GIF Tools
+> Network Data
 
-- Use <a href="http://recordit.co/" target="_blank">**Recordit**</a> to create quicks screencasts of your desktop and export them as `GIF`s.
-- For terminal sessions, there's <a href="https://github.com/chjj/ttystudio" target="_blank">**ttystudio**</a> which also supports exporting `GIF`s.
+- Get list of edges
+- Get status of each node at given timestep
+- Convert data to NetworkX object
+- Check if two users are connected 
+- Plot the network
+- Animate the actions, to recreate what happened during the experiment
 
-**Recordit**
+**Animation Example**
 
 ![Recordit GIF](https://i.ibb.co/FYChwTM/animation-1.gif)
-
-**ttystudio**
-
-![ttystudio GIF](https://raw.githubusercontent.com/chjj/ttystudio/master/img/example.gif)
 
 ---
 
