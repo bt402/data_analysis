@@ -47,7 +47,7 @@
 
 ---
 
-## Table of Contents (Optional)
+## Table of Contents
 
 > If your `README` has a lot of info, section headers might be nice.
 
@@ -56,17 +56,13 @@
 
 ---
 
-## Example (Optional)
+## Example
 
-```javascript
-// code away!
+```python 
+// check the actions of a specific user before they got infected, using their username 
 
-let generateProject = project => {
-  let code = [];
-  for (let js = 0; js < project.length; js++) {
-    code.push(js);
-  }
-};
+user_data.actions_before_infection(username="Anna") # pass in the username as parameter without XML extension
+
 ```
 
 ---
