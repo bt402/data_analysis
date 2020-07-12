@@ -359,6 +359,23 @@ Counter({'sent': 3, 'received': 2})
 
 >>> user_data.count_action(b, action_type="opened_item") # count specific action type - types avaliable: "sent", "received", "opened_item", "deleted"
 {'opened_item': 1}
+
+
+list_of_actions = user_data.list_of_actions(user_id=12) # can also use the list_of_actions() function for a single user
+>>> user_data.count_action(list_of_actions)
+Counter({'sent': 24, 'received': 15, 'opened_item': 9, 'deleted': 4})
+
+interacted_in_scenario(user_id_a, user_id_b):
+        '''
+        Check if two users interacted with each other during the scenario
+        :param user_id_a: source node numeric ID
+        :param user_id_b: target node numeric ID
+        :return: boolean, True if the two interacted, False if they didn't
+        '''
+		return interacted_bool
+
+>>> user_data.interacted_in_scenario(7, 9)
+False 
 ```
 
 ---
