@@ -104,6 +104,8 @@ user_data.user_is_seed(username="roco89") # check if user was a seed, the parame
 
 - Scikit-learn Function
 
+> Sample features avaliable in experiment_features.csv
+
 ```python
 import experiments_data as ed
 
