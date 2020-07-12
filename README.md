@@ -201,7 +201,7 @@ get_neighbours(user_id, username):
 	return list_of_neighbours
 	
 >>> network_data.get_neighbours(user_id=9)
-[8, 11, 14, 16, 17, 20, 22
+[8, 11, 14, 16, 17, 20, 22]
 ```
 
 - User Data Functions 
