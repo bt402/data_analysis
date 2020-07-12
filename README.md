@@ -109,7 +109,7 @@ import experiments_data as ed
 
 ed.data_location("experiments_ES/first_run/round1/") 
 
->>> generate_action_csv() 
+>>> ed.generate_action_csv() 
 Actions in CSV: ['sent', 'received', 'opened_item', 'deleted']
 
 
@@ -117,10 +117,10 @@ Actions in CSV: ['sent', 'received', 'opened_item', 'deleted']
 		The function will generate a CSV file from the actions in the scenario, to which the path location is set to
 		Once file has been generated, the actions that have been found, will be shown in the console
 		The CSV file which can be lodaded in to sklearn has the following format (if all 4 features are used):
-		        Column 1          Column 2        Column 3   Column 4
-		row1	number_of_samples, number_of_features, class0,    class1
+		            Column 1          Column 2          Column 3      Column 4
+		row1	number_of_samples, number_of_features,   class0,       class1
 		
-		row2        #sent           #received      #opened_item  #deleted
+		row2       number_sent         no_received    no_opened_item  no_deleted
 		 .
 		 .
 		 .
