@@ -116,17 +116,17 @@ Actions in CSV: ['sent', 'received', 'opened_item', 'deleted']
 
 
 '''
-	The function will generate a CSV file from the actions in the scenario, to which the path location is set to
-	Once file has been generated, the actions that have been found, will be shown in the console
-	The CSV file which can be lodaded in to sklearn has the following format (if all 4 features are used):
-	
-	row1	number_of_samples, number_of_features,   class0,       class1
-	
-	row2       number_sent,  no_received,  no_opened_item,  no_deleted,  true/false if infected
-	 .
-	 .
-	 .
-	row n
+The function will generate a CSV file from the actions in the scenario, to which the path location is set to
+Once file has been generated, the actions that have been found, will be shown in the console
+The CSV file which can be lodaded in to sklearn has the following format (if all 4 features are used):
+
+row1	number_of_samples, number_of_features,   class0,       class1
+
+row2       number_sent,  no_received,  no_opened_item,  no_deleted,  true/false if infected
+ .
+ .
+ .
+row n
 '''
 
 ```
