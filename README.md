@@ -113,7 +113,7 @@ ed.data_location("experiments_ES/first_run/round1/")
 		The function will generate a CSV file from the actions in the scenario, to which the path location is set to
 		Once file has been generated, the actions that have been found, will be shown in the console
 		The CSV file which can be lodaded in to sklearn has the following format (if all 4 features are used):
-				Column 1          Column 2        Column 3   Column 4
+		Column 1          Column 2        Column 3   Column 4
 		row1	number_of_samples, number_of_features, class0,    class1
 		
 		row2        #sent           #received      #opened_item  #deleted
@@ -185,6 +185,19 @@ users_connected(s, t)
 	:return: boolean if two nodes are connected
 	'''
 	return user_connected
+	
+get_neighbours(user_id, username):
+	'''
+	Return a list of neighbours of a node with a given ID or username, if both blank will return an error
+
+	:param user_id: numeric ID of a node
+	:param username: username of a node
+	:return: list of neighbours
+	'''
+	return list_of_neighbours
+	
+>>> network_data.get_neighbours(user_id=9)
+[8, 11, 14, 16, 17, 20, 22
 ```
 
 - User Data Functions 
@@ -330,6 +343,22 @@ interactions_between_nodes(user_id_a, user_id_b)
 >>> node_b
 {1592904524: None, 1592904525: None, 1592904526: None, 1592904527: ['sent'], 1592904528: ['received'], 1592904529: None, 1592904530: None .....}
 
+count_action(list_of_actions=None, action_type=None)
+	'''
+	The function takes in the list of actions from the interactions_between_nodes or list_of_actions functions and counts either all of the actions or a specific action type
+	:param list_of_actions: the dict returned by interactions_between_nodes() or list_of_actions() function
+	:param action_type: String value, if you want to count a specific action e.g. "opened_item"
+	:return: a dict with counted values
+	'''
+	return count_action_dict
+	
+user_a, user_b = user_data.interactions_between_nodes(7, 13) # get interactions between two nodes first 
+
+>>> user_data.count_action(a)
+Counter({'sent': 3, 'received': 2})
+
+>>> user_data.count_action(b, action_type="opened_item") # count specific action type - types avaliable: "sent", "received", "opened_item", "deleted"
+{'opened_item': 1}
 ```
 
 ---
