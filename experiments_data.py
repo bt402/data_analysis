@@ -6,6 +6,8 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from matplotlib import animation
 import pathlib
+from collections import Counter
+import numpy as np
 
 path_ = None
 f_count_ = None
@@ -20,6 +22,53 @@ def data_location(path):
     parent_dir = pathlib.Path(path)
     file_arr_ = list(glob.iglob(str(parent_dir.parent) + '/status/*_status.csv'))
     no_of_files_ = len(file_arr_)
+
+def get_action_types():
+    all_files = glob.glob(path_ + "*.xml")
+
+    a_counter = Counter()
+    for f in all_files:
+        username = f.strip().split("\\")[1].split(".")[0]
+        ud = user_data()
+        a_counter = a_counter + ud.count_action(ud.list_of_actions(username=username))
+
+    original_list = ["sent", "received", "opened_item", "deleted"]
+    scenario_list = list(a_counter.keys())
+
+    main_list = np.setdiff1d(original_list, scenario_list)
+    if len(main_list) > 0: # if there is an action that doesn't exist, remove it from the original
+        for m in main_list:
+            original_list.remove(m)
+
+    return original_list
+
+def generate_action_csv():
+    file = open(path_ + "experiment_features.csv", "w+")
+
+    all_files = glob.glob(path_ + "*.xml")
+
+    actions_performed = get_action_types()
+
+    file.write(str(len(all_files)) + "," + str(len(actions_performed)) +  ",healthy,infected" + "\n")
+
+    lines = ""
+
+    for f in all_files:
+        username = f.strip().split("\\")[1].split(".")[0]
+        ud = user_data()
+        l = dict(ud.count_action(ud.list_of_actions(username=username)))
+        line = ""
+        for action in actions_performed:
+            ua = l.get(action)
+            if ua != None:
+                line += str(ua) + ","
+            else:
+                line += "0" + ","
+        lines += line[:-1] + "," + str(int(ud.user_infected_in_round(username=username))) + "\n"
+        # print (ud.count_action(ud.list_of_actions(username=username)), ud.user_infected_in_round(username=username))
+    file.write(lines[:-1])
+    file.close()
+    print ("Actions in CSV:" , actions_performed)
 
 class network_data:
 
@@ -161,6 +210,32 @@ class network_data:
         G = self.to_networkx_object()
         return str(s) in G.neighbors(str(t))
 
+    def get_neighbours(self, user_id=None, username=None):
+        '''
+        Return a list of neighbours of a node with a given ID or username, if both blank will return an error
+
+        :param user_id: numeric ID of a node
+        :param username: username of a node
+        :return: list of neighbours
+        '''
+        if user_id == None and username == None:
+            raise Exception("Username parameter blank")
+        elif username != None:
+            ud = user_data()
+            node = user_data.get_id_from_username(ud, username)
+        elif user_id != None:
+            node = int(user_id)
+
+        edges = self.get_edgelist()
+
+        nodes_neighbours = []
+        for e in edges:
+            target, neighbour = e
+            if target == node:
+                nodes_neighbours.append(neighbour)
+
+        return nodes_neighbours
+
 class user_data:
 
     def split_id(self, id, index):
@@ -187,26 +262,27 @@ class user_data:
         parsed_xml = et.parse(f)
         for node in parsed_xml.getroot():
             if node.find('blocked_user') == None and node.find('method') == None:
-                if node.find('user_infected').text != None:
-                    if node.attrib.values():  # check if actions empty
-                        t = int(list(node.attrib.values())[0].split("_")[2])
+                if node.find('user_infected') != None:
+                    if node.find('user_infected').text != None:
+                        if node.attrib.values():  # check if actions empty
+                            t = int(list(node.attrib.values())[0].split("_")[2])
 
-                        user_a = int(list(node.attrib.values())[0].split("_")[0])
-                        user_b = int(list(node.attrib.values())[0].split("_")[1])
+                            user_a = int(list(node.attrib.values())[0].split("_")[0])
+                            user_b = int(list(node.attrib.values())[0].split("_")[1])
 
-                        i_list = [user_a, user_b]
+                            i_list = [user_a, user_b]
 
-                        if user_a_id != None and user_b_id != None:
-                            action = node.tag
-                            if user_a_id in i_list and user_b_id in i_list:
-                                if t in action_dict:
-                                    curr_val = action_dict.get(t)
-                                    if curr_val == None:
-                                        action_list = [str(action)]
-                                        action_dict[t] = action_list
-                                    else:
-                                        curr_val.append(str(action))
-                                        action_dict[t] = curr_val
+                            if user_a_id != None and user_b_id != None:
+                                action = node.tag
+                                if user_a_id in i_list and user_b_id in i_list:
+                                    if t in action_dict:
+                                        curr_val = action_dict.get(t)
+                                        if curr_val == None:
+                                            action_list = [str(action)]
+                                            action_dict[t] = action_list
+                                        else:
+                                            curr_val.append(str(action))
+                                            action_dict[t] = curr_val
             elif node.find('blocked_user') != None:  # blocked action
                 if node.attrib.values():  # check if actions empty
                     t = int(list(node.attrib.values())[0].split("_")[2])
@@ -254,18 +330,19 @@ class user_data:
         parsed_xml = et.parse(f)
         for node in parsed_xml.getroot():
             if node.find('blocked_user') == None and node.find('method') == None:
-                if node.find('user_infected').text != None:
-                    if node.attrib.values():  # check if actions empty
-                        t = int(list(node.attrib.values())[0].split("_")[2])
-                        action = node.tag
-                        if t in action_dict:
-                            curr_val = action_dict.get(t)
-                            if curr_val == None:
-                                action_list = [str(action)]
-                                action_dict[t] = action_list
-                            else:
-                                curr_val.append(str(action))
-                                action_dict[t] = curr_val
+                if node.find('user_infected') != None:
+                    if node.find('user_infected').text != None:
+                        if node.attrib.values():  # check if actions empty
+                            t = int(list(node.attrib.values())[0].split("_")[2])
+                            action = node.tag
+                            if t in action_dict:
+                                curr_val = action_dict.get(t)
+                                if curr_val == None:
+                                    action_list = [str(action)]
+                                    action_dict[t] = action_list
+                                else:
+                                    curr_val.append(str(action))
+                                    action_dict[t] = curr_val
             elif node.find('blocked_user') != None:  # blocked action
                 if node.attrib.values(): # check if actions empty
                     t = int(list(node.attrib.values())[0].split("_")[2])
@@ -420,11 +497,11 @@ class user_data:
             for f in all_files:
                 if f != "round.xml":
                     actions_dict = self.update_action_dict(actions_dict, f)
-        elif timestep!= None and (user_id != None or username != None):
-            timestep_list = timestep_list[timestep]
-            actions_dict = {timestep_list: None}
+        elif timestep!= None and (user_id != None or username!= None):
             if user_id != None:
                 username = self.get_username_from_id(user_id)
+            timestep_list = timestep_list[timestep]
+            actions_dict = {timestep_list: None}
             f = path_ + username + ".xml"
             if f != "round.xml":
                 actions_dict = self.update_action_dict(actions_dict, f)
@@ -564,3 +641,50 @@ class user_data:
             node_b_actions = self.update_dict(node_b_actions, f_b, user_id_a, user_id_b)
 
         return node_a_actions, node_b_actions
+
+    def count_action(self, list_of_actions=None, action_type=None):
+        '''
+        The function takes in the list of actions from the interactions_between_nodes function and counts either all of the actions or a specific action type
+        :param list_of_actions: the dict returned by interactions_between_nodes() function
+        :param action_type: String value, if you want to count a specific action e.g. "opened_item"
+        :return: a dict with counted values
+        '''
+        if list_of_actions == None:
+            raise Exception("You must pass in the list of actions")
+        if list_of_actions != None and action_type == None: # count all actions
+            action_list = []
+            for a in list_of_actions.values():
+                if a != None:
+                    action_list.extend(a)
+            return Counter(action_list)
+        elif list_of_actions != None and action_type != None:
+            action_list = list_of_actions.values()
+            act = 0
+            for a in action_list:
+                if a != None:
+                    ac = Counter(a).get(action_type)
+                    if ac != None:
+                        act += ac
+
+            return {action_type : act}
+
+        return {}
+
+    def interacted_in_scenario(self, user_id_a, user_id_b):
+        '''
+        Check if two users interacted with each other during the scenario
+        :param user_id_a: source node numeric ID
+        :param user_id_b: target node numeric ID
+        :return: boolean, True if the two interacted, False if they didn't
+        '''
+
+        total_actions = []
+        a_actions, b_actions = self.interactions_between_nodes(user_id_a, user_id_b)
+        total_actions.extend(a_actions.values())
+        total_actions.extend(b_actions.values())
+
+        for a  in total_actions:
+            if a != None:
+                return True
+
+        return False
