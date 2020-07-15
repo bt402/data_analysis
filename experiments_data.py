@@ -527,7 +527,7 @@ class user_data:
 
     def get_actions(self, f, append_data, append_bool):
         actions = []
-
+        user_inf = 0
         parsed_xml = et.parse(f)
         for node in parsed_xml.getroot():
             # print(node)
