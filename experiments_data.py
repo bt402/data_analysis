@@ -8,6 +8,8 @@ from matplotlib import animation
 import pathlib
 from collections import Counter
 import numpy as np
+import os
+import ntpath
 
 path_ = None
 f_count_ = None
@@ -245,19 +247,6 @@ class user_data:
         """ return node text or None """
         return node.text if node is not None else None
 
-    def timestep_list(self):
-        parent_dir = pathlib.Path(path_).parent
-        status_files = list(glob.iglob(str(parent_dir) + '/status/*_status.csv'))
-        t_list = []
-
-        for file in status_files:
-            timestep = file.split("\\")[2].split("_")[0]
-            t_list.append(int(timestep))
-
-        t_list.sort()
-
-        return t_list
-
     def update_dict(self, action_dict, f, user_a_id=None, user_b_id=None):
         parsed_xml = et.parse(f)
         for node in parsed_xml.getroot():
@@ -418,6 +407,24 @@ class user_data:
                 return username
         return "Username not found"
 
+    def get_seeds(self):
+        t0 = self.timestep_list()[0]
+
+        parent_dir = pathlib.Path(path_).parent
+        status_file = str(parent_dir) + '/status/' + str(t0) + '_status.csv'
+        seed_ids = []
+
+        f = open (status_file)
+        for line in f:
+            split_line = line.strip().split(",")
+            if split_line[1] == "#FF0000":
+                seed_ids.append(int(split_line[0]))
+
+        return seed_ids
+
+
+
+
     def user_is_seed(self, user_id=None, username=None):
         '''
         Function takes either numerical user ID used in the tracking files, or username
@@ -426,18 +433,15 @@ class user_data:
         :param username: String username
         :return: boolean value
         '''
+        seed_ids = self.get_seeds()
+
         if user_id != None:
-            seed_file = open(path_ + "seeds.csv")
-            for line in seed_file:
-                seed_id = int(line.strip().split(",")[0])
-                if seed_id == user_id:
-                    return True
+            if user_id in seed_ids:
+                return True
         elif username != None:
-            seed_file = open(path_ + "seeds.csv")
-            for line in seed_file:
-                user = line.strip().split(",")[1]
-                if user == username:
-                    return True
+            user_id = self.get_id_from_username(username)
+            if user_id in seed_ids:
+                return True
         elif username == None and user_id == None:
             raise Exception("No parameters passed")
         return False
@@ -475,6 +479,29 @@ class user_data:
                 infected_ids = infected_ids + self.user_infected(f)
 
         return list(set(infected_ids))
+
+    def timestep_list(self):
+        parent_dir = pathlib.Path(path_).parent
+        status_files = list(glob.iglob(str(parent_dir) + '/status/*_status.csv'))
+        t_list = []
+
+        for file in status_files:
+            timestep = file.split("\\")[2].split("_")[0]
+            t_list.append(int(timestep))
+
+        t_list.sort()
+
+        return t_list
+
+
+    def is_infected_from_status_list(self, f, status_list):
+        f_name = ntpath.basename(f).strip().split(".")[0]
+        user_id = str(self.get_id_from_username(f_name))
+        for dicts in status_list:
+            status = dicts.get(user_id)
+            if status == "infected":
+                return True
+        return False
 
     def list_of_actions(self, user_id=None, username=None, timestep=None):
         '''
@@ -525,26 +552,63 @@ class user_data:
                 actions_dict = self.update_action_dict(actions_dict, f)
         return actions_dict
 
-    def get_actions(self, f, append_data, append_bool):
+    def get_actions(self, f, append_data, append_bool, neighbour_id=None):
         actions = []
-        user_inf = 0
+        user_inf = False
         parsed_xml = et.parse(f)
-        for node in parsed_xml.getroot():
-            # print(node)
-            if node.find('blocked_user') == None and node.find('method') == None:
-                if node.find('user_infected').text != None:
-                    user_inf = int(node.find('user_infected').text)
-                if user_inf == 1:
-                    append_data = append_bool
-                if append_data:
+
+        timesteps = self.timestep_list()
+        timesteps.sort()
+
+        nd = network_data()
+
+        # Actions between all the neighbours
+        if neighbour_id == None:
+            for node in parsed_xml.getroot():
+                # print(node)
+                if node.find('blocked_user') == None and node.find('method') == None:
+                    if node.find('user_infected') != None:
+                        if node.find('user_infected').text != None:
+                            time_t = int(dict(node.attrib).get("message_id").split("_")[2])
+                            if time_t in timesteps:
+                                time_index = timesteps.index(time_t)
+                                user_inf = self.is_infected_from_status_list(f, nd.network_status_at_time(time_index))
+                    if user_inf == True:
+                        append_data = append_bool
+                    if append_data:
+                        actions.append(node.tag)
+                elif node.find('blocked_user') != None:  # blocked action
                     actions.append(node.tag)
-            elif node.find('blocked_user') != None:  # blocked action
-                actions.append(node.tag)
-            elif node.find('method') != None:  # recover action
-                actions.append(node.tag)
+                elif node.find('method') != None:  # recover action
+                    actions.append(node.tag)
+        elif neighbour_id != None:
+            for node in parsed_xml.getroot():
+                node_tag = node.tag
+                node_attributes = node.attrib
+                if node_tag != None and node_attributes:
+                    time_t = int(dict(node.attrib).get("message_id").split("_")[2])
+
+                    if time_t in timesteps:
+                        time_index = timesteps.index(time_t)
+                        user_inf = self.is_infected_from_status_list(f, nd.network_status_at_time(time_index))
+
+                    user_a = int(node_attributes.get("message_id").split("_")[0])
+                    user_b = int(node_attributes.get("message_id").split("_")[1])
+                    i_list = [user_a, user_b]
+
+                    username = os.path.basename(f).strip().split(".")[0]
+
+                    user_a_id = self.get_id_from_username(username)
+                    user_b_id = neighbour_id
+                    if user_a_id != None and user_b_id != None:
+                        if user_a_id in i_list and user_b_id in i_list:
+                            if user_inf == True:
+                                append_data = append_bool
+                            if append_data:
+                                actions.append(node_tag)
         return actions
 
-    def actions_before_infection(self, user_id=None, username=None):
+    def actions_before_infection(self, user_id=None, username=None, neighbour_id=None):
         '''
         :param user_id: numerical user ID
         :param username: String username
@@ -561,6 +625,15 @@ class user_data:
             for f in all_files:
                 if f != "round.xml":
                     action_list = action_list + self.get_actions(f, append_data, append_bool)
+        elif (user_id != None or username != None) and neighbour_id != None:
+            if user_id != None:
+                f = path_ + "/" + self.get_username_from_id(user_id) + ".xml"
+                if f != "round.xml":
+                    action_list = action_list + self.get_actions(f, append_data, append_bool, neighbour_id=neighbour_id)
+            else:
+                f = path_ + "/" + username + ".xml"
+                if f != "round.xml":
+                    action_list = action_list + self.get_actions(f, append_data, append_bool, neighbour_id=neighbour_id)
         elif user_id != None:
             f = path_ + "/" + self.get_username_from_id(user_id) + ".xml"
             if f != "round.xml":
@@ -572,7 +645,7 @@ class user_data:
 
         return action_list
 
-    def actions_after_infection(self, user_id=None, username=None):
+    def actions_after_infection(self, user_id=None, username=None, neighbour_id=None):
         '''
         :param user_id: numerical user ID
         :param username: String username
@@ -589,6 +662,15 @@ class user_data:
             for f in all_files:
                 if f != "round.xml":
                     action_list = action_list + self.get_actions(f, append_data, append_bool)
+        elif (user_id != None or username != None) and neighbour_id != None:
+            if user_id != None:
+                f = path_ + "/" + self.get_username_from_id(user_id) + ".xml"
+                if f != "round.xml":
+                    action_list = action_list + self.get_actions(f, append_data, append_bool, neighbour_id=neighbour_id)
+            else:
+                f = path_ + "/" + username + ".xml"
+                if f != "round.xml":
+                    action_list = action_list + self.get_actions(f, append_data, append_bool, neighbour_id=neighbour_id)
         elif user_id != None:
             f = path_ + "/" + self.get_username_from_id(user_id) + ".xml"
             if f != "round.xml":
