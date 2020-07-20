@@ -291,12 +291,14 @@ list_of_actions(user_id=None, username=None, timestep=None)
 >>> user_data.list_of_actions(username="Anna", timestep=10)
 {1592904534: None}
 
-actions_before_infection(user_id=None, username=None)
+actions_before_infection(user_id=None, username=None, neighbour_id=None)
 	'''
 	Takes either numerical user ID or string username, if nothing passed it will amalgamate all user actions 
+	If neighbour_id is passed, the function will return the actions between source-target 
 	Returns a list of actions that took place before infection 
 	:param user_id: numerical user ID
 	:param username: String username
+	:param neighbour_id: numerical user ID of the neighbour
 	:return: If no parameters passed, return actions before infection for all users, otherwise return for specific user
 	'''
 	return action_list
@@ -310,12 +312,17 @@ actions_before_infection(user_id=None, username=None)
 >>> user_data.actions_before_infection(username="mttll")
 ['sent', 'sent', 'sent', 'sent', 'sent', 'sent', 'sent', 'received', 'sent', 'sent', 'received', 'received', 'opened_item']
 
-actions_after_infection(user_id=None, username=None)
+>>> user_data.actions_before_infection(user_id=11, neighbour_id=13)
+['sent', 'deleted', 'received', 'deleted', 'sent', 'sent', 'sent', 'sent', 'received']
+
+actions_after_infection(user_id=None, username=None, neighbour_id=None)
 	'''
 	Takes either numerical user ID or string username, if nothing passed it will amalgamate all user actions 
+	If neighbour_id is passed, the function will return the actions between source-target 
 	Returns a list of actions that took place before infection 
 	:param user_id: numerical user ID
 	:param username: String username
+	:param neighbour_id: numerical user ID of the neighbour
 	:return: If no parameters passed, return actions after infection for all users, otherwise return for specific user
 	'''
 	return action_list
@@ -380,6 +387,24 @@ interacted_in_scenario(user_id_a, user_id_b):
 
 >>> user_data.interacted_in_scenario(7, 9)
 False 
+
+get_seeds()
+		'''
+		Takes no parameters
+		:return: list of seeds in the given round 
+		'''
+>>> get_seeds()
+[17, 21]
+
+timestep_list()
+		'''
+		Takes no parameters
+		:return: list of timesteps in epoch time 
+		'''
+
+>>> timestep_list()
+[1592904739, 1592904740, 1592904741, 1592904742, 1592904743, 1592904744, 1592904745, 1592904746, 1592904747, 1592904748, 1592904749, 1592904750, 1592904751....]		
+		
 ```
 
 ---
