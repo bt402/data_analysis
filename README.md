@@ -389,18 +389,19 @@ interacted_in_scenario(user_id_a, user_id_b):
 False 
 
 get_seeds()
+        '''
+        Takes no parameters
+        :return: list of seeds in the given round
 		'''
-		Takes no parameters
-		:return: list of seeds in the given round 
-		'''
+		
 >>> get_seeds()
 [17, 21]
 
 timestep_list()
-		'''
-		Takes no parameters
-		:return: list of timesteps in epoch time 
-		'''
+        '''
+        Takes no parameters
+        :return: list of timesteps in epoch time
+        '''
 
 >>> timestep_list()
 [1592904739, 1592904740, 1592904741, 1592904742, 1592904743, 1592904744, 1592904745, 1592904746, 1592904747, 1592904748, 1592904749, 1592904750, 1592904751....]		
