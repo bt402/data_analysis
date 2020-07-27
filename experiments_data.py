@@ -486,7 +486,8 @@ class user_data:
         t_list = []
 
         for file in status_files:
-            timestep = file.split("\\")[2].split("_")[0]
+            f_name = ntpath.basename(file)
+            timestep = f_name.split("_")[0]
             t_list.append(int(timestep))
 
         t_list.sort()
