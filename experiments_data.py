@@ -30,7 +30,8 @@ def get_action_types():
 
     a_counter = Counter()
     for f in all_files:
-        username = f.strip().split("\\")[1].split(".")[0]
+        f_name = ntpath.basename(f)
+        username = f_name.split(".")[0]
         ud = user_data()
         a_counter = a_counter + ud.count_action(ud.list_of_actions(username=username))
 
@@ -80,7 +81,8 @@ class network_data:
         t_list = []
 
         for file in status_files:
-            timestep = file.split("\\")[2].split("_")[0]
+            f_name = ntpath.basename(file)
+            timestep = f_name.split("_")[0]
             t_list.append(int(timestep))
 
         t_list.sort()
